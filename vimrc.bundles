@@ -57,6 +57,11 @@ Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-surround'
 Plug 'vim-ruby/vim-ruby'
 Plug 'vim-scripts/tComment'
+Plug 'danro/rename.vim'
+Plug 'tpope/vim-cucumber'
+Plug 'vim-scripts/matchit.zip'
+Plug 'vim-scripts/ctags.vim'
+Plug 'rking/ag.vim'
 
 if filereadable(expand("~/.vimrc.bundles.local"))
   source ~/.vimrc.bundles.local

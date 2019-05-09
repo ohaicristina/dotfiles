@@ -1,19 +1,50 @@
 # Unix
-alias ll="ls -al"
-alias ln="ln -v"
-alias mkdir="mkdir -p"
-alias e="$EDITOR"
-alias v="$VISUAL"
+alias ll='ls -al'
+alias ln='ln -v'
+alias mkdir='mkdir -p'
+alias e='$EDITOR'
+alias v='$VISUAL'
+
+# Unix - from local
+alias tlf='tail -f'
+alias ...='../..'
+alias l='ls'
+alias lh='ls -Alh'
+alias -g G='| grep'
+alias -g M='| less'
+alias -g L='| wc -l'
+alias -g ONE='| awk '{ print \$1}''
+
+# Git - from local
+alias gci='git pull --rebase && rake && git push'
+alias gs='git status'
+alias gcob='git checkout -b'
+alias gaa='git add .'
+alias gcv='git commit --verbose'
+alias griom='git rebase -i origin/master'
+alias gpuf='git push --force'
+alias unfuck='git reset --hard'
+alias gcom='git checkout master && git pull'
+alias gitback='git checkout -'
 
 # Bundler
-alias b="bundle"
+alias b='bundle'
 
 # Rails
-alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
-alias s="rspec"
+alias migrate='rake db:migrate db:rollback && rake db:migrate db:test:prepare'
+alias s='rspec'
 
 # Pretty print the path
-alias path='echo $PATH | tr -s ":" "\n"'
+alias path='echo $PATH | tr -s ':' '\n''
 
-# Include custom aliases
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$PATH:/usr/local/lib/node_modules"
+export PATH=$HOME/.rbenv/shims:$HOME/.rbenv/bin:$PATH
+export PATH="/usr/local/bin:$PATH"
+source $HOME/.zshenv
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
+
+# aliases local
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local

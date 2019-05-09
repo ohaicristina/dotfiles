@@ -15,8 +15,6 @@
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
-[merge]
-  ff = only
 [commit]
   template = ~/.gitmessage
 [fetch]
@@ -25,3 +23,6 @@
   autosquash = true
 [include]
   path = ~/.gitconfig.local
+[user]
+	name = Cristina Silva
+	email = casilva62592@gmail.com

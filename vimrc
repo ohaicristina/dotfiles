@@ -1,3 +1,21 @@
+" Vim Plug Congfig
+call plug#begin('~/.vim/plugged')
+
+Plug 'mattn/emmet-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'chrisbra/Colorizer'
+Plug 'christoomey/vim-run-interactive'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'janko-m/vim-test'
+Plug 'kchmck/vim-coffee-script'
+Plug 'pangloss/vim-javascript'
+Plug 'pbrisbin/vim-mkdir'
+Plug 'scrooloose/syntastic'
+Plug 'vim-scripts/tComment'
+
+call plug#end()
+
 " Leader
 let mapleader = " "
 
@@ -18,9 +36,11 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 
-if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
-endif
+" Had to comment this out to get plugins to work
+
+"if filereadable(expand("~/.vimrc.bundles"))
+"  source ~/.vimrc.bundles
+"endif
 
 " Load matchit.vim, but only if the user hasn't installed a newer version.
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
@@ -51,8 +71,8 @@ augroup END
 let g:is_posix = 1
 
 " Softtabs, 2 spaces
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set shiftround
 set expandtab
 
@@ -154,3 +174,23 @@ set diffopt+=vertical
 if filereadable($HOME . "/.vimrc.local")
   source ~/.vimrc.local
 endif
+"
+" Highlight cursor
+set cursorline
+set cursorcolumn
+
+" Color scheme
+syntax on
+colorscheme parsec
+
+" Colorizer on
+:let g:colorizer_auto_filetype='css,html'
+
+" Easier save mapping
+command W w
+
+" Silver searcher
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" Typescript syntax
+autocmd BufNewFile,BufRead *.tsx set syntax=typescript
