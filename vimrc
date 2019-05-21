@@ -181,7 +181,7 @@ set cursorcolumn
 
 " Color scheme
 syntax on
-colorscheme parsec
+"colorscheme parsec
 
 " Colorizer on
 :let g:colorizer_auto_filetype='css,html'

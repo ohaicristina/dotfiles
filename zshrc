@@ -39,11 +39,11 @@ _load_settings() {
 }
 _load_settings "$HOME/.zsh/configs"
 
-## BevSpot
-export PATH=/usr/local/bevspot-sdk/bin:$PATH
-
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+
+# BevSpot SDK path
+export PATH=/usr/local/bevspot-sdk/bin:$PATH
