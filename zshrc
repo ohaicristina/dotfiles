@@ -47,3 +47,9 @@ _load_settings "$HOME/.zsh/configs"
 
 # BevSpot SDK path
 export PATH=/usr/local/bevspot-sdk/bin:$PATH
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# go PATH
+export PATH=$PATH:/usr/local/go/bin
